@@ -1,3 +1,8 @@
+I completely understand. Here is the full text formatted into a clean, professional **Markdown** file. I have ensured that all the sections, including the project structure and technical details, are correctly structured for a high-quality GitHub README.
+
+You can copy the entire block below and paste it directly into your `README.md` file.
+
+```markdown
 # 🏭 Industrial Automated Optical Inspection (AOI) System
 
 ## 📌 Project Overview
@@ -5,8 +10,10 @@ This project demonstrates an end-to-end **Industrial Computer Vision System** de
 
 The system is now capable of **Offline Inference**, allowing it to run directly on the factory floor with zero latency and high security.
 
+---
+
 ## 📂 Project Structure
-text
+```text
 Industrial-AOI-System/
 ├── Defective_Parts/           # Dataset: Images of defective impeller castings
 ├── Perfect_Parts/             # Dataset: Images of normal impeller castings
@@ -21,39 +28,45 @@ Industrial-AOI-System/
 ├── labels.txt                 # Classification labels (OK, Defective)
 ├── test_image.jpeg            # Sample sensor image for validation
 └── README.md                  # Project documentation
-⚙️ Core Technologies
-AI Model: Azure AI Vision (Custom Vision)
+```
 
-Edge Engine: ONNX Runtime (Offline Inference)
+---
 
-GUI Framework: CustomTkinter (Modern Industrial UI)
+## ⚙️ Core Technologies
+*   **AI Model:** Azure AI Vision (Custom Vision)
+*   **Edge Engine:** ONNX Runtime (Offline Inference)
+*   **GUI Framework:** CustomTkinter (Modern Industrial UI)
+*   **Programming:** Python 3.x (OpenCV, NumPy, Pillow)
+*   **Domain:** Mechatronics, Quality Assurance, & Industry 4.0
 
-Programming: Python 3.x (OpenCV, NumPy, Pillow)
+---
 
-Domain: Mechatronics, Quality Assurance, & Industry 4.0
-
-🚀 How It Works
+## 🚀 How It Works
 The system supports two operational modes:
 
-Cloud Mode (inspection_system.py): Uses the Azure REST API to send images to the cloud for analysis. Ideal for low-power devices with stable internet.
+*   **Cloud Mode (`inspection_system.py`):** Uses the Azure REST API to send images to the cloud for analysis. Ideal for low-power devices with stable internet.
+*   **Edge Mode (`aoi_dashboard.py`):** Uses the exported ONNX model for local, high-speed inference. This mode generates a **Control Signal (HIGH/LOW)** to trigger a pneumatic rejection arm if a defect is detected.
 
-Edge Mode (aoi_dashboard.py): Uses the exported ONNX model for local, high-speed inference. This mode generates a Control Signal (HIGH/LOW) to trigger a pneumatic rejection arm if a defect is detected.
+---
 
-📊 Model Performance
-Precision: 100.0%
+## 📊 Model Performance
+*   **Precision:** 100.0%
+*   **Recall:** 100.0%
+*   **mAP:** 100.0%
+*(Trained on 800 balanced industrial images).*
 
-Recall: 100.0%
+---
 
-mAP: 100.0%
-(Trained on 800 balanced industrial images).
+## 🖼️ User Interface
+The system features a **Dark Mode Industrial Dashboard** that provides real-time feedback:
 
-🖼️ User Interface
-The system features a Dark Mode Industrial Dashboard that provides real-time feedback:
+*   **Visual Feed:** Displays the current part under inspection.
+*   **Status Indicator:** Green (OK) or Red (Defective).
+*   **Confidence Score:** Real-time probability percentage.
+*   **Conveyor Status:** Simulated PLC signal (Running/Halted).
 
-Visual Feed: Displays the current part under inspection.
+---
+*Developed by Ezaldeen A. Qassem as part of the Azure AI Engineering Diploma.*
+```
 
-Status Indicator: Green (OK) or Red (Defective).
-
-Confidence Score: Real-time probability percentage.
-
-Conveyor Status: Simulated PLC signal (Running/Halted).
+This version includes the proper **text block** for your folder structure and **bullet points** for your technologies and UI features to ensure it renders perfectly on GitHub.
