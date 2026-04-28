@@ -1,4 +1,4 @@
-```markdown
+
 # 🏭 Industrial Automated Optical Inspection (AOI) System
 
 ## 📌 Project Overview
@@ -61,8 +61,7 @@ The system features a **Dark Mode Industrial Dashboard** that provides real-time
 *   **Confidence Score:** Real-time probability percentage.
 *   **Conveyor Status:** Simulated PLC signal (Running/Halted).
 
----
-*Developed by Ezaldeen A. Qassem as part of the Azure AI Engineering Diploma.*
+---  
+*Developed by Ezz El-Din Al-Muliki as part of the Azure AI Engineering Diploma.*
 ```
 
-This version includes the proper **text block** for your folder structure and **bullet points** for your technologies and UI features to ensure it renders perfectly on GitHub.
