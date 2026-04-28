@@ -1,21 +1,59 @@
 # 🏭 Industrial Automated Optical Inspection (AOI) System
 
 ## 📌 Project Overview
-This project demonstrates an end-to-end **Industrial Computer Vision System** designed for manufacturing pipelines. It utilizes **Azure Custom Vision (Transfer Learning & ResNet)** to automatically detect casting defects in submersible pump impellers, bridging the gap between Cloud AI and local PLC control systems.
+This project demonstrates an end-to-end **Industrial Computer Vision System** designed for smart manufacturing pipelines. It utilizes **Azure Custom Vision (Transfer Learning & ResNet)** to automatically detect casting defects in submersible pump impellers, effectively bridging the gap between Cloud AI training and Local Edge deployment.
 
-## ⚙️ Core Technologies
-* **AI Model:** Azure AI Vision (Custom Vision)
-* **Architecture:** General (Compact) for edge-deployment readiness.
-* **Logic Controller:** Python REST API integration.
-* **Domain:** Mechatronics & Industry 4.0
+The system is now capable of **Offline Inference**, allowing it to run directly on the factory floor with zero latency and high security.
 
-## 🚀 How It Works
-1. **Data Acquisition:** The system reads an image simulating an industrial camera feed.
-2. **Cloud Inference:** Sends the binary image data to the trained Azure model via HTTP POST request.
-3. **Control Signal Generation:** If a defect is detected with high confidence (>80%), a simulated `HIGH` signal is generated to trigger a pneumatic rejection arm on the conveyor belt.
+## 📂 Project Structure
+text
+Industrial-AOI-System/
+├── Defective_Parts/           # Dataset: Images of defective impeller castings
+├── Perfect_Parts/             # Dataset: Images of normal impeller castings
+├── Visuals/                   # Documentation and UI screenshots
+│   ├── GUI_Defective_Sample.png
+│   ├── GUI_Perfect_Sample.png
+│   ├── Result_in_Custom_ai_vision.png
+│   └── Result_in_VSCode.png
+├── aoi_dashboard.py           # NEW: Modern Offline GUI (Edge AI)
+├── inspection_system.py       # Legacy: Cloud-based inference script
+├── model.onnx                 # Exported Edge AI model for local inference
+├── labels.txt                 # Classification labels (OK, Defective)
+├── test_image.jpeg            # Sample sensor image for validation
+└── README.md                  # Project documentation
+⚙️ Core Technologies
+AI Model: Azure AI Vision (Custom Vision)
 
-## 📊 Model Performance
-* **Precision:** 100.0%
-* **Recall:** 100.0%
-* **mAP:** 100.0%
-*(Trained on 800 perfectly balanced industrial images).*
+Edge Engine: ONNX Runtime (Offline Inference)
+
+GUI Framework: CustomTkinter (Modern Industrial UI)
+
+Programming: Python 3.x (OpenCV, NumPy, Pillow)
+
+Domain: Mechatronics, Quality Assurance, & Industry 4.0
+
+🚀 How It Works
+The system supports two operational modes:
+
+Cloud Mode (inspection_system.py): Uses the Azure REST API to send images to the cloud for analysis. Ideal for low-power devices with stable internet.
+
+Edge Mode (aoi_dashboard.py): Uses the exported ONNX model for local, high-speed inference. This mode generates a Control Signal (HIGH/LOW) to trigger a pneumatic rejection arm if a defect is detected.
+
+📊 Model Performance
+Precision: 100.0%
+
+Recall: 100.0%
+
+mAP: 100.0%
+(Trained on 800 balanced industrial images).
+
+🖼️ User Interface
+The system features a Dark Mode Industrial Dashboard that provides real-time feedback:
+
+Visual Feed: Displays the current part under inspection.
+
+Status Indicator: Green (OK) or Red (Defective).
+
+Confidence Score: Real-time probability percentage.
+
+Conveyor Status: Simulated PLC signal (Running/Halted).
