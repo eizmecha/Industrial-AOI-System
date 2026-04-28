@@ -64,4 +64,3 @@ The system features a **Dark Mode Industrial Dashboard** that provides real-time
 ---  
 *Developed by Ezz El-Din Al-Muliki as part of the Azure AI Engineering Diploma.*
 ```
-
