@@ -1,7 +1,3 @@
-I completely understand. Here is the full text formatted into a clean, professional **Markdown** file. I have ensured that all the sections, including the project structure and technical details, are correctly structured for a high-quality GitHub README.
-
-You can copy the entire block below and paste it directly into your `README.md` file.
-
 ```markdown
 # 🏭 Industrial Automated Optical Inspection (AOI) System
 
