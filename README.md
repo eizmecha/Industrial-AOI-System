@@ -62,5 +62,5 @@ The system features a **Dark Mode Industrial Dashboard** that provides real-time
 *   **Conveyor Status:** Simulated PLC signal (Running/Halted).
 
 ---  
-*Developed by Ezz El-Din Al-Muliki as part of the Azure AI Engineering Diploma.*
+*Developed by Ezz El-Din Al-Muliki as part of the Azure AI.*
 ```
